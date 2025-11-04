@@ -190,7 +190,7 @@ awk '{if(NR%4==1) {printf(">%s\n",substr($0,2));} else if(NR%4==2) print;}' > A3
 
 Use grep to get the read numbers by counting the lines beginning with >.
 ```{bash, eval = F}
-grep -c '^>' *.fa | less 
+grep -c '^>' *.fa 
 ```
 
 > :memo: **Question 4:** What is the difference between FASTQ and FASTA files?  
