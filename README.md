@@ -236,7 +236,7 @@ cat ./MERGED/A31_B1.sample_demux.1.fastq | \
 
 Use grep to get the read numbers by counting the lines beginning with >.
 ```{bash, eval = F}
-grep -c '^>' *sample*.fa | less 
+grep -c '^>' *sample*.fa 
 ```
 
 Exit the DEMULTIPLEXED sub-directory. 
