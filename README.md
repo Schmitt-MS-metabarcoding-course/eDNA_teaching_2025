@@ -604,7 +604,7 @@ head(track_3)
 
 ```
 
-> :memo: **Question 15:** How many sequences did we loose at each step for the first six ASVs occuring in the table? 
+> :memo: **Question 15:** How many sequences did we lose at each step for the first six ASVs occuring in the table? 
   
 Now we go on to save our data so we could load it in later. 
 
@@ -644,17 +644,11 @@ Before we can start with the curation and decontamination we need to load additi
 
 ```{r, eval = F}
 library(here)
-
 library(decontam)
-
 library(phyloseq)
-
 library(lulu)
-
 library(Biostrings)
-
 library(tidyverse)
-
 ```
 
 ## Decontamination
@@ -812,7 +806,7 @@ saveRDS(ASV_table_fungi_cur, here("Data", "ASV_table_fungi_cur.rds"))
 ```
 
 > :memo: **Question 20:** How many reads were merged?  
-> :memo: **Question 21:** Which parameters does the LULU algorithm consider in it's merging?  
+> :memo: **Question 21:** Which parameters does the LULU algorithm consider for merging different ASVs?  
 > :memo: **Question 22:** What are the default parameters? 
   
 # 8. Diversity Analysis
