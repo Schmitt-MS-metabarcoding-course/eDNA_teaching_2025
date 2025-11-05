@@ -758,17 +758,23 @@ We don't want it to compare each sequence with eachother. So we need to make a t
 
 We move to the terminal.
 
+Open the conda environment containing blast.
 ```{bash, eval = F}
-# Open the conda environment containing blast. 
 conda activate blast
+```
 
-# Move into the Data folder.
+Move into the Data folder.
+```{bash, eval = F}
 cd Data
+```
 
-# Create a database containing the algal ASVs in fasta format.
+Create a database containing the algal ASVs in fasta format.
+```{bash, eval = F}
 makeblastdb -in ASVs_fungi.fa -parse_seqids -dbtype nucl
+```
 
-# Compare all ASVs to each other and create a match list of sequences that are similar to each other.
+Compare all ASVs to each other and create a match list of sequences that are similar to each other.
+```{bash, eval = F}
 blastn -db ASVs_fungi.fa \
 -outfmt '6 qseqid sseqid pident' \
 -out match_list_fungi.txt \
@@ -776,9 +782,11 @@ blastn -db ASVs_fungi.fa \
 -perc_identity 84 \
 -num_threads 6 \
 -query ASVs_fungi.fa
+```
 
+De-activate the conda environment.
+```{bash, eval = F}
 conda deactivate
-
 ```
 
 Now that we have obtained our matchlist we move back into RStudio and run the actual LULU curation.
